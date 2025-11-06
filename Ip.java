@@ -19,4 +19,5 @@ public class Ip {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 }

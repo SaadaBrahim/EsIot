@@ -18,4 +18,5 @@ public class Posizione {
     public void setLongitudine(double longitudine) {
         this.longitudine = longitudine;
     }
+
 }
