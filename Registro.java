@@ -12,6 +12,13 @@ public class Registro {
 
     //metodi
 
+    public void stampaSensori() {
+        System.out.println("Sensori registrati:");
+        for (int i = 0; i < nSensoriRegistrati; i++) {
+            System.out.println("- " + listaSensori[i]);
+        }
+    }
+
     private void raddoppiaSpazio() {
         listaSensori = Arrays.copyOf(listaSensori, listaSensori.length * 2);
         System.out.println("spazio raddoppiato a " + listaSensori.length + " elementi.");
@@ -25,6 +32,19 @@ public class Registro {
         nSensoriRegistrati++;
     }
 
+    public void deleteSensore(Sensori sensoreDaCanc) {
+        for (int i = 0; i < nSensoriRegistrati; i++) {
+            if (listaSensori[i].equals(sensoreDaCanc)) {
+
+                for (int j = i; j < nSensoriRegistrati - 1; j++) {
+                    listaSensori[j] = listaSensori[j + 1];
+                }
+                listaSensori[nSensoriRegistrati - 1] = null;
+                nSensoriRegistrati--;
+                return;
+            }
+        }
+    }
 
 
 

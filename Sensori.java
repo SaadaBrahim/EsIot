@@ -1,18 +1,19 @@
 import javax.xml.crypto.Data;
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Sensori {
     private Ip ipPrivato;
     private Posizione posizioneOra;
-    private Data ultimoCambioBat;
-    private Data prossimaSostituzioneBat;
+    private Date ultimoCambioBat;
+    private Date prossimaSostituzioneBat;
     private float qualitaAria;
 
     //metodiCos
     public Sensori(){
 
     }
-    public Sensori(Ip ipPrivato, Posizione posizoneOra, Data ultimoCambioBat, Data prossimaSostituzioneBat){
+    public Sensori(Ip ipPrivato, Posizione posizoneOra, Date ultimoCambioBat, Date prossimaSostituzioneBat){
         this.ipPrivato = ipPrivato;
         this.posizioneOra = posizoneOra;
         this.ultimoCambioBat = ultimoCambioBat;
@@ -38,19 +39,19 @@ public class Sensori {
         this.posizioneOra = posizioneOra;
     }
 
-    public Data getUltimoCambioBat() {
+    public Date getUltimoCambioBat() {
         return ultimoCambioBat;
     }
 
-    public void setUltimoCambioBat(Data ultimoCambioBat) {
+    public void setUltimoCambioBat(Date ultimoCambioBat) {
         this.ultimoCambioBat = ultimoCambioBat;
     }
 
-    public Data getProssimaSostituzioneBat() {
+    public Date getProssimaSostituzioneBat() {
         return prossimaSostituzioneBat;
     }
 
-    public void setProssimaSostituzioneBat(Data prossimaSostituzioneBat) {
+    public void setProssimaSostituzioneBat(Date prossimaSostituzioneBat) {
         this.prossimaSostituzioneBat = prossimaSostituzioneBat;
     }
 
