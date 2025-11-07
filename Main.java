@@ -17,7 +17,12 @@ public class Main {
         R.stampaSensori();
 
         R.aggiungiSensore(s2);
+
+
+        Sensori s3 = new Sensori(new Ip(), new Posizione(), new Date(), new Date());
+        R.aggiungiSensore(s3);
         R.stampaSensori();
+
 
         R.deleteSensore(s1);
         R.stampaSensori();

@@ -7,7 +7,7 @@ public class Registro {
     // metodiCos
     public Registro(){
     this.nSensoriRegistrati = 0;
-    this.listaSensori = new Sensori[10];
+    this.listaSensori = new Sensori[3];
     }
 
     //metodi
@@ -21,8 +21,9 @@ public class Registro {
 
     private void raddoppiaSpazio() {
         listaSensori = Arrays.copyOf(listaSensori, listaSensori.length * 2);
-        System.out.println("spazio raddoppiato a " + listaSensori.length + " elementi.");
+        System.out.println("Spazio raddoppiato a " + listaSensori.length + " elementi.");
     }
+
 
     public void aggiungiSensore(Sensori nuovoSensore) {
         if (nSensoriRegistrati == listaSensori.length) {
