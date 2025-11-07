@@ -20,6 +20,16 @@ public class Sensori {
         this.prossimaSostituzioneBat = prossimaSostituzioneBat;
     }
 
+    @Override
+    public String toString() {
+        return "Sensore {" +
+                "ipPrivato=" + ipPrivato +
+                ", posizioneOra=" + posizioneOra +
+                ", ultimoCambioBat=" + ultimoCambioBat +
+                ", prossimaSostituzioneBat=" + prossimaSostituzioneBat +
+                ", qualitaAria=" + qualitaAria +
+                '}';
+    }
 
     // GetterSetter
 

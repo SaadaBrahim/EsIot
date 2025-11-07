@@ -12,12 +12,15 @@ public class Registro {
 
     //metodi
 
+
     public void stampaSensori() {
         System.out.println("Sensori registrati:");
         for (int i = 0; i < nSensoriRegistrati; i++) {
             System.out.println("- " + listaSensori[i]);
         }
     }
+
+
 
     private void raddoppiaSpazio() {
         listaSensori = Arrays.copyOf(listaSensori, listaSensori.length * 2);

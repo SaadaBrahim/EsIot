@@ -20,4 +20,6 @@ public class Ip {
         this.ip = ip;
     }
 
+
+
 }
