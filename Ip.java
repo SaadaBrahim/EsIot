@@ -34,13 +34,14 @@ public class Ip {
         this.ip = ip;
     }
 
-    public boolean equals(Ip other) {
-        if (SBM.equals(other.SBM) && ip.equals(other.ip)) {
+    public boolean equals(Ip ip2) {
+        if (SBM.equals(ip2.SBM) && ip.equals(ip2.ip)) {
             return true;
         } else {
             return false;
         }
     }
+
 
 
 }

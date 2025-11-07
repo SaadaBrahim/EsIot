@@ -11,9 +11,11 @@ public class Main {
         s1.setProssimaSostituzioneBat(new Date());
         s1.setUltimoCambioBat(new Date());
 
+        System.out.println("Sensori registrati:");
         R.stampaSensori();
 
         R.aggiungiSensore(s1);
+        System.out.println("Sensori registrati:");
         R.stampaSensori();
 
         R.aggiungiSensore(s2);
@@ -21,10 +23,12 @@ public class Main {
 
         Sensori s3 = new Sensori(new Ip("/16", "175.92.1.54"), new Posizione(1,4), new Date(), new Date());
         R.aggiungiSensore(s3);
+        System.out.println("Sensori registrati:");
         R.stampaSensori();
 
 
         R.deleteSensore(s1);
+        System.out.println("Sensori registrati:");
         R.stampaSensori();
 
         System.out.println("il sensore 1 e ugulae al sensore 2 ? " + s1.equals(s2));
