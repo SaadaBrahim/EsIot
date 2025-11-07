@@ -2,6 +2,20 @@ public class Ip {
     private String SBM;
     private String ip;
 
+    public Ip(String SBM, String ip){
+        this.SBM = SBM;
+        this.ip = ip;
+    }
+
+
+    public String toString(){
+        return "ipAddress {" +
+                "SubnetM =" + SBM +
+                ", IP = " + ip + "}";
+
+    }
+
+
     // GetterSetter
 
     public String getSBM() {
@@ -20,6 +34,13 @@ public class Ip {
         this.ip = ip;
     }
 
+    public boolean equals(Ip other) {
+        if (SBM.equals(other.SBM) && ip.equals(other.ip)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 }

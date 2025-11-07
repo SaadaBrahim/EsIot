@@ -20,16 +20,31 @@ public class Sensori {
         this.prossimaSostituzioneBat = prossimaSostituzioneBat;
     }
 
-    @Override
+
     public String toString() {
         return "Sensore {" +
-                "ipPrivato=" + ipPrivato +
-                ", posizioneOra=" + posizioneOra +
-                ", ultimoCambioBat=" + ultimoCambioBat +
-                ", prossimaSostituzioneBat=" + prossimaSostituzioneBat +
-                ", qualitaAria=" + qualitaAria +
-                '}';
+                "ipPrivato = " + ipPrivato.toString() +
+                ", posizioneOra = " + posizioneOra.toString() +
+                ", ultimoCambioBat = " + ultimoCambioBat +
+                ", prossimaSostituzioneBat = " + prossimaSostituzioneBat +
+                ", qualitaAria = " + qualitaAria + "}";
+
     }
+
+    public boolean equals(Sensori s) {
+        if (s == null) return false;
+
+        if (!ipPrivato.equals(s.ipPrivato)) return false;
+        if (!posizioneOra.equals(s.posizioneOra)) return false;
+        if ((ultimoCambioBat == null && s.ultimoCambioBat != null) ||
+                (ultimoCambioBat != null && !ultimoCambioBat.equals(s.ultimoCambioBat))) return false;
+        if ((prossimaSostituzioneBat == null && s.prossimaSostituzioneBat != null) ||
+                (prossimaSostituzioneBat != null && !prossimaSostituzioneBat.equals(s.prossimaSostituzioneBat))) return false;
+        if (qualitaAria != s.qualitaAria) return false;
+
+        return true;
+    }
+
 
     // GetterSetter
 

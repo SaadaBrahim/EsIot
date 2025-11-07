@@ -2,6 +2,18 @@ public class Posizione {
     private double latitudine;
     private double longitudine;
 
+    public Posizione(double LAT, double LON){
+        latitudine = LAT;
+        longitudine = LON;
+    }
+
+    public String toString(){
+            return "posizione {" +
+                    "latitudine =" + latitudine +
+                    ", longitudine = " + longitudine + "}";
+
+        }
+
 
     public double getLatitudine() {
         return latitudine;
@@ -18,5 +30,14 @@ public class Posizione {
     public void setLongitudine(double longitudine) {
         this.longitudine = longitudine;
     }
+
+    public boolean equals(Posizione p) {
+        if (latitudine == p.latitudine && longitudine == p.longitudine) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }
